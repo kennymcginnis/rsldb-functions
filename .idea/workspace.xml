@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d6308c50-3013-4700-a004-ceffd3a48fe1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ken McGinnis &lt;kenneth.j.mcginnis@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bCQaM4oRfnh9mkMb8ADowHmr9K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/functions/src/handlers" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\kenne\workspace\rsldb\rsldb-functions\functions\node_modules\prettier" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kenne\workspace\rsldb\rsldb-functions\functions\src\handlers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kenne\workspace\rsldb\rsldb-functions\functions\src\data" />
+      <recent name="C:\Users\kenne\workspace\rsldb\rsldb-functions\functions" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/functions/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.deploy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6308c50-3013-4700-a004-ceffd3a48fe1" name="Default Changelist" comment="" />
+      <created>1588133657899</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588133657899</updated>
+      <workItem from="1588133659055" duration="2913000" />
+      <workItem from="1588301998008" duration="32000" />
+      <workItem from="1588382759833" duration="3781000" />
+      <workItem from="1588802479582" duration="35389000" />
+      <workItem from="1589733451891" duration="38735000" />
+      <workItem from="1590025879789" duration="15901000" />
+      <workItem from="1590459103348" duration="25000" />
+    </task>
+    <task id="LOCAL-00001" summary="chore(prettier): updating version">
+      <created>1588133831806</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588133831806</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore(prettier): updating version">
+      <created>1588134052787</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588134052787</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feature(handlers): adding `metadata` and `users_champions` handlers">
+      <created>1589699269367</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589699269367</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore(serviceAccount): removing this file">
+      <created>1589699563005</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589699563006</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feature(timestamps): adding timestamps into metadata">
+      <created>1590457296615</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590457296615</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore(git): Reinitialized existing Git repository in C:/Users/kenne/workspace/rsldb/rsldb-functions/.git/">
+      <created>1590458592855</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590458592855</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore(git): Reinitialized existing Git repository in C:/Users/kenne/workspace/rsldb/rsldb-functions/.git/">
+      <created>1590458641984</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590458641984</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/functions" />
+    </ignored-roots>
+    <MESSAGE value="chore(prettier): updating version" />
+    <MESSAGE value="feature(handlers): adding `metadata` and `users_champions` handlers" />
+    <MESSAGE value="chore(serviceAccount): removing this file" />
+    <MESSAGE value="feature(timestamps): adding timestamps into metadata" />
+    <MESSAGE value="chore(git): Reinitialized existing Git repository in C:/Users/kenne/workspace/rsldb/rsldb-functions/.git/" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(git): Reinitialized existing Git repository in C:/Users/kenne/workspace/rsldb/rsldb-functions/.git/" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589699129737">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1589699129737" />
+    <state x="856" y="148" width="960" height="863" key="CommitChangelistDialog2" timestamp="1590458641410">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="856" y="148" width="960" height="863" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590458641410" />
+    <state x="675" y="230" key="FileChooserDialogImpl" timestamp="1588212840322">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="675" y="230" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1588212840322" />
+    <state width="1899" height="508" key="GridCell.Tab.0.bottom" timestamp="1588196395422">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="508" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1588196395422" />
+    <state width="1899" height="508" key="GridCell.Tab.0.center" timestamp="1588196395422">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="508" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1588196395422" />
+    <state width="1899" height="508" key="GridCell.Tab.0.left" timestamp="1588196395422">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="508" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1588196395422" />
+    <state width="1899" height="508" key="GridCell.Tab.0.right" timestamp="1588196395422">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="508" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1588196395422" />
+    <state x="720" y="242" key="RollbackChangesDialog" timestamp="1589699385099">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="720" y="242" key="RollbackChangesDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1589699385099" />
+    <state x="461" y="185" key="SettingsEditor" timestamp="1590459127507">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="185" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590459127507" />
+    <state x="2381" y="185" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1589661375457" />
+    <state x="807" y="454" key="VCS.ChangelistChooser" timestamp="1589685372634">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="807" y="454" key="VCS.ChangelistChooser/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1589685372634" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1590458643193">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590458643193" />
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589699425401">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1589699425401" />
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589763454482">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1589763454482" />
+    <state x="769" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589679069848">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="769" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1589679069848" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1590299274722">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590299274722" />
+    <state x="2587" y="253" width="585" height="534" key="find.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1590216199274" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1588382803797">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" key="run.anything.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1588382803797" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1589694184533">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1589694184533" />
+  </component>
+</project>
