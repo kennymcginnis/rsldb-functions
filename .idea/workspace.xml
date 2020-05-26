@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6308c50-3013-4700-a004-ceffd3a48fe1" name="Default Changelist" comment="" />
+    <list default="true" id="d6308c50-3013-4700-a004-ceffd3a48fe1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/kenne.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rsldb-functions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +90,8 @@
       <workItem from="1588802479582" duration="35389000" />
       <workItem from="1589733451891" duration="38735000" />
       <workItem from="1590025879789" duration="15901000" />
-      <workItem from="1590459103348" duration="25000" />
+      <workItem from="1590459103348" duration="152000" />
+      <workItem from="1590459260868" duration="253000" />
     </task>
     <task id="LOCAL-00001" summary="chore(prettier): updating version">
       <created>1588133831806</created>
