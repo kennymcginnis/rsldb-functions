@@ -76,21 +76,40 @@ const createChampion = async ({ body }, res) => {
   }
 }
 
-const updateChampion = async ({ body: { uid, ...updates } }, res) => {
+const updateMultipleChampions = async ({ body: champions }, res) => {
+  if (!nonEmptyArray(champions))
+    return res.status(400).json({ error: 'At least one champion is required' })
+
+  const output = {}
+  await Promise.all(
+    champions.map((body, index) =>
+      updateChampion(body).then(
+        response => (output[response.uid || `Entry:${index}`] = response.error || 'updated'),
+      ),
+    ),
+  )
+  return res.json(output)
+}
+
+const updateOneChampion = async ({ body }, res) => {
+  const response = await updateChampion(body)
+  return res.status(response.error ? 500 : 200).json(response)
+}
+
+const updateChampion = async ({ uid, ...updates }) => {
   try {
-    if (!uid) return res.status(400).json({ uid: 'A champion uid is required' })
-    if (!updates) return res.status(400).json({ body: 'Put body must not be empty' })
+    if (!uid) return { error: { uid: 'A champion uid is required' } }
+    if (!updates) return { error: { body: 'Put body must not be empty' } }
 
     const champion = await db.doc(`/champions/${uid}`).get()
-    if (!champion.exists)
-      return res.status(404).json({ error: `No champion found with the uid: ${uid}` })
+    if (!champion.exists) return { error: { uid: `No champion found with the uid: ${uid}` } }
 
     const cleaned = cleanChampion(updates)
     await champion.ref.update(cleaned)
-    return res.json({ uid, ...champion.data(), ...cleaned })
+    return { uid, ...champion.data(), ...cleaned }
   } catch (err) {
     console.error(err)
-    return res.status(500).json({ error: err.code })
+    return { error: err.code }
   }
 }
 
@@ -102,5 +121,6 @@ Object.assign(exports, {
   findByNameIn,
   getChampion,
   getChampions,
-  updateChampion,
+  updateMultipleChampions,
+  updateOneChampion,
 })

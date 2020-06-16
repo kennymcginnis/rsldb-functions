@@ -12,7 +12,12 @@ const {
   createMetadata,
   updateMetadata,
 } = require('./src/handlers/metadata')
-const { fetchChampions, createChampion, updateChampion } = require('./src/handlers/champions')
+const {
+  fetchChampions,
+  createChampion,
+  updateMultipleChampions,
+  updateOneChampion,
+} = require('./src/handlers/champions')
 const {
   fetchUsersChampions,
   importChampions,
@@ -39,7 +44,8 @@ app.get('/user/champions/:userId', fetchUsersChampions)
 
 app.get('/champions', fetchChampions)
 app.post('/champion', FBAuth, createChampion)
-app.put('/champion', FBAuth, updateChampion)
+app.put('/champion', FBAuth, updateOneChampion)
+app.put('/champions', FBAuth, updateMultipleChampions)
 
 app.get('/metadata', fetchMetadata)
 app.post('/metadata', FBAuth, createMetadata)
