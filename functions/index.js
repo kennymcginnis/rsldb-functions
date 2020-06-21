@@ -13,6 +13,7 @@ const {
   updateMetadata,
 } = require('./src/handlers/metadata')
 const {
+  fetchChampion,
   fetchChampions,
   createChampion,
   updateMultipleChampions,
@@ -42,6 +43,7 @@ app.get('/timestamps', fetchTimestamps)
 // any user routes
 app.get('/user/champions/:userId', fetchUsersChampions)
 
+app.get('/champion/:championId', fetchChampion)
 app.get('/champions', fetchChampions)
 app.post('/champion', FBAuth, createChampion)
 app.put('/champion', FBAuth, updateOneChampion)

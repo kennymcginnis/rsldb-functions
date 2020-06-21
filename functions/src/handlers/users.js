@@ -33,7 +33,11 @@ const signup = async (req, res) => {
     const { valid, errors } = validateSignupData(newUser)
     if (!valid) return res.status(400).json(errors)
 
-    const existingHandle = await db.doc(`/users/${newUser.handle}`).get()
+    const existingHandle = await db
+      .collection('users')
+      .where('handle', '==', req.user.uid)
+      .limit(1)
+      .get()
     if (existingHandle.exists) return res.status(400).json({ handle: 'Handle already in use' })
 
     const { user } = await firebase
@@ -41,16 +45,16 @@ const signup = async (req, res) => {
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
 
     const userCredentials = {
+      uid: user.uid,
       handle: newUser.handle,
       email: newUser.email,
       createdAt: new Date().toISOString(),
       // TODO Append token to imageUrl. Work around just add token from image in storage.
       imageUrl: `${baseImageUrl}/no-img.png?alt=media`,
-      userId: user.uid,
     }
 
     const token = await user.getIdToken()
-    await db.doc(`/users/${newUser.handle}`).set(userCredentials)
+    await db.doc(`/users/${user.uid}`).set(userCredentials)
     return res.status(201).json({ token })
   } catch (err) {
     console.error(err)

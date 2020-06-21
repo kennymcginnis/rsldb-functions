@@ -1,3 +1,5 @@
+const { nonEmptyArray } = require('../util/validators')
+
 const { db } = require('../util/admin')
 
 const cleanChampion = ({ attributes, avatar, image, name, order, uid }) => {
@@ -33,12 +35,16 @@ const findByNameIn = names =>
 const getChampions = () =>
   db
     .collection('champions')
+    .orderBy('order')
     .get()
     .then(data => data.docs.map(championFromDocumentSnapshot))
 
-const fetchChampion = (req, res) => {
+const fetchChampion = async ({ params: { championId } }, res) => {
+  console.log(championId)
   try {
-    return res.json(getChampion(req.body.uid))
+    const champion = await getChampion(championId)
+    console.dir(champion, { depth: 2, colors: true })
+    return res.json(champion)
   } catch (err) {
     console.error(err)
     return res.status(500).json({ error: err.code })
@@ -104,9 +110,16 @@ const updateChampion = async ({ uid, ...updates }) => {
     const champion = await db.doc(`/champions/${uid}`).get()
     if (!champion.exists) return { error: { uid: `No champion found with the uid: ${uid}` } }
 
+    if (updates.attributes) {
+      const oldAttributes = champion.data().attributes
+      const newAttributes = { ...oldAttributes, ...updates.attributes }
+      updates.attributes = newAttributes
+    }
+
     const cleaned = cleanChampion(updates)
-    await champion.ref.update(cleaned)
-    return { uid, ...champion.data(), ...cleaned }
+    console.dir(cleaned, { depth: 2, colors: true })
+    await db.doc(`/champions/${uid}`).update(cleaned)
+    return { uid, ...cleaned }
   } catch (err) {
     console.error(err)
     return { error: err.code }
