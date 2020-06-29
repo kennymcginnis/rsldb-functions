@@ -803,16 +803,16 @@ exports.metadata /* 20200516 */ = [
   },
 ]
 
-exports.RARE_RANK_ID = '4UKgV40Fq9i0ySxLqE3f'
-exports.LEGENDARY_RANK_ID = 'HH7lefSp7UN9JXWrXepz'
 exports.COMMON_RANK_ID = 'a5Hb3kKctPjvjKjonv1M'
 exports.UNCOMMON_RANK_ID = 'a8KGPwQrfqGKDPzgdJXG'
+exports.RARE_RANK_ID = '4UKgV40Fq9i0ySxLqE3f'
 exports.EPIC_RANK_ID = 's9nWh3XrywUKO4FmAWaf'
+exports.LEGENDARY_RANK_ID = 'HH7lefSp7UN9JXWrXepz'
 
 exports.defaultRanks = {
-  COMMON_RANK_ID: 1,
-  UNCOMMON_RANK_ID: 2,
-  RARE_RANK_ID: 3,
-  EPIC_RANK_ID: 4,
-  LEGENDARY_RANK_ID: 5,
+  a5Hb3kKctPjvjKjonv1M: 1,
+  a8KGPwQrfqGKDPzgdJXG: 2,
+  '4UKgV40Fq9i0ySxLqE3f': 3,
+  s9nWh3XrywUKO4FmAWaf: 4,
+  HH7lefSp7UN9JXWrXepz: 5,
 }

@@ -35,7 +35,7 @@ const signup = async (req, res) => {
 
     const existingHandle = await db
       .collection('users')
-      .where('handle', '==', req.user.uid)
+      .where('handle', '==', newUser.handle)
       .limit(1)
       .get()
     if (existingHandle.exists) return res.status(400).json({ handle: 'Handle already in use' })
@@ -44,8 +44,10 @@ const signup = async (req, res) => {
       .auth()
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
 
+    console.dir({ user }, { depth: 2, colors: false })
+
     const userCredentials = {
-      uid: user.uid,
+      // uid: user.uid,
       handle: newUser.handle,
       email: newUser.email,
       createdAt: new Date().toISOString(),

@@ -15,11 +15,10 @@ module.exports = (req, res, next) => {
     .verifyIdToken(idToken)
     .then(decodedToken => {
       req.user = decodedToken
-      // console.dir({ decodedToken }, { depth: 2, colors: true })
-      return db.collection('users').where('userId', '==', req.user.uid).limit(1).get()
+      return db.doc(`/users/${req.user.uid}`).get()
     })
     .then(data => {
-      const dbUser = data.docs[0].data()
+      const dbUser = data.data()
       req.user.handle = dbUser.handle
       req.user.imageUrl = dbUser.imageUrl
       // console.dir({ 'req.user': req.user }, { depth: 2, colors: true })

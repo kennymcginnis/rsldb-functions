@@ -21,8 +21,7 @@ const {
 } = require('./src/handlers/champions')
 const {
   fetchUsersChampions,
-  importChampions,
-  pullChampion,
+  pullChampions,
   updateUserChampions,
 } = require('./src/handlers/users_champions')
 
@@ -34,9 +33,8 @@ app.post('/login', login)
 // app.post('/user', FBAuth, updateUserDetails)
 app.get('/users/champions', FBAuth, fetchUsersChampions)
 app.get('/users/champions/:userId', fetchUsersChampions)
-app.get('/users/champion/pull/:championId', FBAuth, pullChampion)
 app.put('/users/champions/:action', FBAuth, updateUserChampions)
-app.post('/users/champions/import', FBAuth, importChampions)
+app.post('/users/champions/pull', FBAuth, pullChampions)
 
 app.get('/timestamps', fetchTimestamps)
 

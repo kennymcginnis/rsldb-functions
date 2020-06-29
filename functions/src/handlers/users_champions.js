@@ -30,7 +30,7 @@ const fetchUsersChampions = async ({ params: { userId }, user }, res) => {
     const me = user && user.uid // authentication not always required
     if (!userId && !me)
       return res.status(400).json({ error: 'You must be logged in, or a user id is required' })
-    console.dir({ userId }, { depth: 2, colors: true })
+    // console.dir({ uid: userId || me }, { depth: 2, colors: true })
     const usersChampions = await findByUser(userId || me)
     return res.json(usersChampions)
   } catch (err) {
@@ -43,48 +43,37 @@ const defaultUserChampion = (user, champion, rarity) => ({
   user,
   champion,
   rank: defaultRanks[rarity],
-  acquired: 1,
   ascension: 0,
 })
 
-const pullChampion = async ({ params: { action, championId }, user: { uid: userId } }, res) => {
+const pullChampions = async (
+  { body: { champion_ids, champion_names }, user: { uid: userId } },
+  res,
+) => {
   try {
-    if (!championId) return res.status(400).json({ error: 'A champion id is required' })
-
-    const champion = championMap[championId]
-    if (!champion) return res.status(400).json({ user_champion: 'Champion not found' })
-
-    const userChampion = defaultUserChampion(userId, championId, champion.attributes.rarity)
-    const { id: uid } = await db.collection('users_champions').add(userChampion)
-    return res.json({ uid, ...userChampion })
-  } catch (err) {
-    console.error(err)
-    return res.status(500).json({ error: err.code })
-  }
-}
-
-const importChampions = async ({ user: { uid: userId }, body: { champion_names } }, res) => {
-  try {
-    if (!nonEmptyArray(champion_names))
-      return res.status(400).json({ error: 'At least one champion name is required' })
+    if (!nonEmptyArray(champion_ids) && !nonEmptyArray(champion_names))
+      return res.status(400).json({ error: 'At least one champion id or name is required' })
 
     const output = {}
+    const champions = champion_ids || champion_names
     await Promise.all(
-      champion_names.map(champion_name => {
-        const dbChampion = championNameMap[champion_name]
+      champions.map(champion => {
+        const dbChampion = championMap[champion] || championNameMap[champion]
+        console.dir({ dbChampion }, { depth: 2, colors: true })
         if (/* found */ dbChampion) {
           const userChampion = defaultUserChampion(
             userId,
             dbChampion.uid,
             dbChampion.attributes.rarity,
           )
+          console.dir({ userChampion }, { depth: 2, colors: true })
           return db
             .collection('users_champions')
             .add(userChampion)
             .then(() => (output[dbChampion.name] = 'added'))
             .catch(err => (output[dbChampion.name] = err))
         } /* not found */ else {
-          output[champion_name] = 'Champion not found'
+          output[champion] = 'Champion not found'
           return Promise.resolve()
         }
       }),
@@ -143,7 +132,6 @@ const updateUserChampions = async (
 
 Object.assign(exports, {
   fetchUsersChampions,
-  importChampions,
-  pullChampion,
+  pullChampions,
   updateUserChampions,
 })
